@@ -1,0 +1,304 @@
+Namespace(batch_size=8, decay_rate=0.7, decay_step=200000, gpu=0, learning_rate=0.001, log_dir='log', max_epoch=25, model='pointnet_cls', momentum=0.9, num_point=1024, optimizer='adam')
+**** EPOCH 000 ****
+Training for one epoch starting now
+----0-----
+mean loss: 2.490884
+accuracy: 0.468750
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 34066.694611
+eval accuracy: 0.437500
+eval avg class acc: 0.454545
+Evaluation for one epoch ended
+Model saved in file: log/model.ckpt
+**** EPOCH 001 ****
+Training for one epoch starting now
+----0-----
+mean loss: 3.600678
+accuracy: 0.531250
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 1138.483918
+eval accuracy: 0.625000
+eval avg class acc: 0.615152
+Evaluation for one epoch ended
+**** EPOCH 002 ****
+Training for one epoch starting now
+----0-----
+mean loss: 2.145124
+accuracy: 0.500000
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 17.950180
+eval accuracy: 0.531250
+eval avg class acc: 0.518182
+Evaluation for one epoch ended
+**** EPOCH 003 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.819714
+accuracy: 0.500000
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 562.842345
+eval accuracy: 0.656250
+eval avg class acc: 0.645455
+Evaluation for one epoch ended
+**** EPOCH 004 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.766315
+accuracy: 0.593750
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 298.272253
+eval accuracy: 0.687500
+eval avg class acc: 0.669697
+Evaluation for one epoch ended
+**** EPOCH 005 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.431727
+accuracy: 0.687500
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 20.176361
+eval accuracy: 0.625000
+eval avg class acc: 0.612121
+Evaluation for one epoch ended
+**** EPOCH 006 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.510044
+accuracy: 0.593750
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 18.993062
+eval accuracy: 0.625000
+eval avg class acc: 0.621212
+Evaluation for one epoch ended
+**** EPOCH 007 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.643192
+accuracy: 0.593750
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 50.690637
+eval accuracy: 0.593750
+eval avg class acc: 0.581818
+Evaluation for one epoch ended
+**** EPOCH 008 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.521206
+accuracy: 0.656250
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 23.445114
+eval accuracy: 0.656250
+eval avg class acc: 0.645455
+Evaluation for one epoch ended
+**** EPOCH 009 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.810672
+accuracy: 0.562500
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 82.640405
+eval accuracy: 0.625000
+eval avg class acc: 0.615152
+Evaluation for one epoch ended
+**** EPOCH 010 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.508026
+accuracy: 0.562500
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 89.526745
+eval accuracy: 0.500000
+eval avg class acc: 0.493939
+Evaluation for one epoch ended
+Model saved in file: log/model.ckpt
+**** EPOCH 011 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.091405
+accuracy: 0.812500
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 68.684864
+eval accuracy: 0.593750
+eval avg class acc: 0.581818
+Evaluation for one epoch ended
+**** EPOCH 012 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.084009
+accuracy: 0.781250
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 186.648521
+eval accuracy: 0.656250
+eval avg class acc: 0.645455
+Evaluation for one epoch ended
+**** EPOCH 013 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.467370
+accuracy: 0.562500
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 7.359706
+eval accuracy: 0.781250
+eval avg class acc: 0.775758
+Evaluation for one epoch ended
+**** EPOCH 014 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.303370
+accuracy: 0.593750
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 16.011530
+eval accuracy: 0.562500
+eval avg class acc: 0.554545
+Evaluation for one epoch ended
+**** EPOCH 015 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.500290
+accuracy: 0.531250
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 66.357827
+eval accuracy: 0.531250
+eval avg class acc: 0.521212
+Evaluation for one epoch ended
+**** EPOCH 016 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.301386
+accuracy: 0.656250
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 218.740964
+eval accuracy: 0.500000
+eval avg class acc: 0.490909
+Evaluation for one epoch ended
+**** EPOCH 017 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.324789
+accuracy: 0.625000
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 76.286762
+eval accuracy: 0.562500
+eval avg class acc: 0.548485
+Evaluation for one epoch ended
+**** EPOCH 018 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.114905
+accuracy: 0.750000
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 12.614995
+eval accuracy: 0.750000
+eval avg class acc: 0.751515
+Evaluation for one epoch ended
+**** EPOCH 019 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.159898
+accuracy: 0.656250
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 1.373749
+eval accuracy: 0.750000
+eval avg class acc: 0.748485
+Evaluation for one epoch ended
+**** EPOCH 020 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.033101
+accuracy: 0.625000
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 133.996930
+eval accuracy: 0.625000
+eval avg class acc: 0.615152
+Evaluation for one epoch ended
+Model saved in file: log/model.ckpt
+**** EPOCH 021 ****
+Training for one epoch starting now
+----0-----
+mean loss: 0.998401
+accuracy: 0.687500
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 85.811269
+eval accuracy: 0.625000
+eval avg class acc: 0.618182
+Evaluation for one epoch ended
+**** EPOCH 022 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.189567
+accuracy: 0.531250
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 26.269671
+eval accuracy: 0.875000
+eval avg class acc: 0.875758
+Evaluation for one epoch ended
+**** EPOCH 023 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.220162
+accuracy: 0.750000
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 61.350283
+eval accuracy: 0.687500
+eval avg class acc: 0.681818
+Evaluation for one epoch ended
+**** EPOCH 024 ****
+Training for one epoch starting now
+----0-----
+mean loss: 1.456067
+accuracy: 0.531250
+Training for one epoch ended
+Evaluation for one epoch starting now
+----0-----
+eval mean loss: 62.427362
+eval accuracy: 0.781250
+eval avg class acc: 0.778788
+Evaluation for one epoch ended

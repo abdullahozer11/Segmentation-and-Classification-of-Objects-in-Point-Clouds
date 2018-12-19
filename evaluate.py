@@ -36,7 +36,7 @@ if not os.path.exists(DUMP_DIR): os.mkdir(DUMP_DIR)
 LOG_FOUT = open(os.path.join(DUMP_DIR, 'log_evaluate.txt'), 'w')
 LOG_FOUT.write(str(FLAGS)+'\n')
 
-NUM_CLASSES = 40
+NUM_CLASSES = 3
 SHAPE_NAMES = [line.rstrip() for line in \
     open(os.path.join(BASE_DIR, 'data/modelnet40_ply_hdf5_2048/shape_names.txt'))] 
 
@@ -59,7 +59,7 @@ def evaluate(num_votes):
     with tf.device('/gpu:'+str(GPU_INDEX)):
         pointclouds_pl, labels_pl = MODEL.placeholder_inputs(BATCH_SIZE, NUM_POINT)
         is_training_pl = tf.placeholder(tf.bool, shape=())
-
+        
         # simple model
         pred, end_points = MODEL.get_model(pointclouds_pl, is_training_pl)
         loss = MODEL.get_loss(pred, labels_pl, end_points)
@@ -141,7 +141,7 @@ def eval_one_epoch(sess, ops, num_votes=1, topk=1):
             loss_sum += batch_loss_sum
 
             for i in range(start_idx, end_idx):
-                l = current_label[i]
+                l = int(current_label[i])
                 total_seen_class[l] += 1
                 total_correct_class[l] += (pred_val[i-start_idx] == l)
                 fout.write('%d, %d\n' % (pred_val[i-start_idx], l))
