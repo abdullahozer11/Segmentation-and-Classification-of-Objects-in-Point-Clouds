@@ -21,10 +21,10 @@ parser.add_argument('--model', default='pointnet_cls', help='Model name: pointne
 parser.add_argument('--log_dir', default='log', help='Log dir [default: log]')
 parser.add_argument('--num_point', type=int, default=1024, help='Point Number [256/512/1024/2048] [default: 1024]')
 parser.add_argument('--max_epoch', type=int, default=250, help='Epoch to run [default: 250]')
-#parser.add_argument('--max_epoch', type=int, default=250, help='Epoch to run [default: 250]')
-parser.add_argument('--batch_size', type=int, default=8, help='Batch Size during training [default: 16]')
-#parser.add_argument('--batch_size', type=int, default=32, help='Batch Size during training [default: 32]')
-parser.add_argument('--learning_rate', type=float, default=0.001, help='Initial learning rate [default: 0.001]')
+#parser.add_argument('--batch_size', type=int, default=8, help='Batch Size during training [default: 16]')
+parser.add_argument('--batch_size', type=int, default=32, help='Batch Size during training [default: 32]')
+parser.add_argument('--learning_rate', type=float, default=0.0005, help='Initial learning rate [default: 0.0001]')
+#parser.add_argument('--learning_rate', type=float, default=0.001, help='Initial learning rate [default: 0.001]')
 parser.add_argument('--momentum', type=float, default=0.9, help='Initial learning rate [default: 0.9]')
 parser.add_argument('--optimizer', default='adam', help='adam or momentum [default: adam]')
 parser.add_argument('--decay_step', type=int, default=200000, help='Decay step for lr decay [default: 200000]')
@@ -53,7 +53,7 @@ LOG_FOUT.write(str(FLAGS)+'\n')
 
 #here it might be needed to change
 MAX_NUM_POINT = 2048
-NUM_CLASSES = 3
+NUM_CLASSES = 2
 
 BN_INIT_DECAY = 0.5
 BN_DECAY_DECAY_RATE = 0.5
@@ -61,6 +61,8 @@ BN_DECAY_DECAY_STEP = float(DECAY_STEP)
 BN_DECAY_CLIP = 0.99
 
 HOSTNAME = socket.gethostname()
+
+flag=0
 
 # ModelNet40 official train/test split
 TRAIN_FILES = provider.getDataFiles( \
@@ -166,13 +168,17 @@ def train():
             log_string("Training for one epoch ended")
             log_string("Evaluation for one epoch starting now")
             eval_one_epoch(sess, ops, test_writer)
+            if(flag==1):
+                save_path = saver.save(sess, os.path.join(LOG_DIR, "model.ckpt"))
+                log_string("Model saved in file: %s" % save_path)
+                break
             log_string("Evaluation for one epoch ended")
 
 
             # Save the variables to disk.
-            if epoch % 10 == 0:
+            '''if epoch % 10 == 0:
                 save_path = saver.save(sess, os.path.join(LOG_DIR, "model.ckpt"))
-                log_string("Model saved in file: %s" % save_path)
+                log_string("Model saved in file: %s" % save_path)'''
 
 
 
@@ -222,6 +228,7 @@ def train_one_epoch(sess, ops, train_writer):
 
 
 def eval_one_epoch(sess, ops, test_writer):
+    global flag
     """ ops: dict mapping from string to tf ops """
     is_training = False
     total_correct = 0
@@ -261,8 +268,8 @@ def eval_one_epoch(sess, ops, test_writer):
     log_string('eval mean loss: %f' % (loss_sum / float(total_seen)))
     log_string('eval accuracy: %f'% (total_correct / float(total_seen)))
     log_string('eval avg class acc: %f' % (np.mean(np.array(total_correct_class)/np.array(total_seen_class,dtype=np.float))))
-
-
+    if ((total_correct/total_seen)==1.0):
+        flag=1
 
 if __name__ == "__main__":
     train()
